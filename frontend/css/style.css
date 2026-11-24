@@ -8,9 +8,8 @@
 }
 body {
   margin: 0;
-  height: 100vh;
-  display: flex;
-  place-items: center;
+  min-height: 100vh;
+  background: #f3f4f6;
 }
 a {
   color: #1d4ed8;
@@ -65,12 +64,15 @@ button:hover {
   color: #b91c1c;
 }
 .topo {
+  width: 100%;
+  min-height: 64px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #172554;
   color: white;
   padding: 12px 24px;
+  box-sizing: border-box;
 }
 .topo a {
   color: white;
@@ -83,9 +85,11 @@ button:hover {
 .conteudo {
   display: grid;
   gap: 20px;
-  max-width: 1000px;
+  width: 100%;
+  max-width: 960px;
   margin: 24px auto;
   padding: 0 16px;
+  box-sizing: border-box;
 }
 .item {
   display: flex;
