@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloqueios</title>
+  <link rel="stylesheet" href="http://localhost:3000/css/style.css">
+</head>
+<body>
+  <header class="topo"><h1>Bloqueios</h1><nav><a href="http://localhost:3000/pages/reservas.html">Reservas</a><button id="logout" type="button">Sair</button></nav></header>
+  <main class="conteudo">
+    <section class="card">
+      <h2>Novo bloqueio</h2>
+      <form id="form-bloqueio" class="grade">
+        <label>Data<input type="date" name="data" required></label>
+        <label>Motivo<input name="motivo" required></label>
+        <button type="submit">Bloquear</button>
+      </form>
+      <p id="mensagem" class="mensagem"></p>
+    </section>
+    <section class="card"><h2>Bloqueios cadastrados</h2><div id="lista-bloqueios"></div></section>
+  </main>
+  <script src="http://localhost:3000/js/api.js"></script>
+  <script src="http://localhost:3000/js/bloqueios.js"></script>
+</body>
+</html>

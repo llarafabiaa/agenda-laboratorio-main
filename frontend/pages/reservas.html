@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas</title>
+  <link rel="stylesheet" href="http://localhost:3000/css/style.css">
+</head>
+<body class="app-body">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">R</span><div><strong>ReservaLab</strong><small>Laboratorios</small></div></div>
+    <nav class="side-nav" aria-label="Menu principal">
+      <a class="ativo" href="http://localhost:3000/pages/reservas.html"><span>▦</span> Agenda</a>
+      <a href="http://localhost:3000/pages/bloqueios.html" id="link-bloqueios"><span>◼</span> Bloqueios</a>
+    </nav>
+    <div class="perfil">
+      <div class="avatar" id="avatar">U</div>
+      <div><strong id="nome-usuario">Usuario</strong><small id="perfil-usuario">Professor</small></div>
+      <button id="logout" type="button" title="Sair">↪</button>
+    </div>
+  </aside>
+
+  <main class="app-main">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Agenda semanal</p>
+        <h1>Reservas de laboratorio</h1>
+      </div>
+      <button class="botao-nova" id="botao-nova" type="button">+ Nova reserva</button>
+    </header>
+
+    <section class="agenda-layout">
+      <div class="agenda-card">
+        <div class="agenda-toolbar">
+          <div class="week-nav">
+            <button type="button" id="semana-anterior" aria-label="Semana anterior">‹</button>
+            <button type="button" id="hoje">Hoje</button>
+            <button type="button" id="proxima-semana" aria-label="Proxima semana">›</button>
+          </div>
+          <h2 id="titulo-semana"></h2>
+          <button type="button" class="botao-hoje" id="data-hoje"></button>
+        </div>
+        <div class="calendar-scroll">
+          <div class="calendar-grid" id="calendar-grid"></div>
+        </div>
+        <div class="legend">
+          <span><i class="livre"></i>Livre</span>
+          <span><i class="selecionado"></i>Selecionado</span>
+          <span><i class="ocupado"></i>Reservado</span>
+          <span><i class="bloqueado"></i>Bloqueado</span>
+        </div>
+      </div>
+
+      <aside class="booking-panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow">Nova reserva</p><h2 id="data-selecionada">Selecione um horario</h2></div>
+          <button type="button" id="limpar-selecao" title="Limpar selecao">×</button>
+        </div>
+        <form id="form-reserva">
+          <label>Turma / atividade
+            <input name="turma_atividade" placeholder="Ex: 2o ano - Informatica" required>
+          </label>
+          <label>Periodos selecionados
+            <div class="selected-periods" id="periodos-selecionados"><span>Nenhum periodo</span></div>
+          </label>
+          <p id="mensagem" class="mensagem"></p>
+          <button class="confirmar" type="submit" disabled>Confirmar reserva</button>
+        </form>
+
+        <div class="reservas-recentes">
+          <h3>Proximas reservas</h3>
+          <div id="lista-reservas"></div>
+        </div>
+      </aside>
+    </section>
+  </main>
+  <script src="http://localhost:3000/js/api.js?v=20261123"></script>
+  <script src="http://localhost:3000/js/reservas.js?v=20261123"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar conta</title>
+  <link rel="stylesheet" href="http://localhost:3000/css/style.css">
+</head>
+<body>
+  <main class="tela-login">
+    <section class="auth-visual">
+      <div class="auth-brand"><span>R</span><strong>ReservaLab</strong></div>
+      <div class="auth-copy"><p>AGENDA ACADÊMICA</p><h1>Seu horario pronto para a proxima aula.</h1><span>Crie sua conta para reservar periodos do laboratorio.</span></div>
+    </section>
+    <section class="auth-card">
+      <div class="auth-card-inner">
+        <p class="eyebrow">Primeiro acesso</p><h1>Criar conta</h1>
+        <form id="form-cadastro">
+          <label>Nome<input name="nome" placeholder="Seu nome" required></label>
+          <label>Email<input type="email" name="email" placeholder="nome@escola.com" required></label>
+          <label>Senha<input type="password" name="senha" minlength="6" placeholder="Minimo 6 caracteres" required></label>
+          <button type="submit">Criar minha conta</button>
+        </form>
+        <p id="mensagem" class="mensagem"></p>
+        <p class="auth-link">Ja possui conta? <a href="http://localhost:3000/">Entrar</a></p>
+      </div>
+    </section>
+  </main>
+  <script src="http://localhost:3000/js/api.js"></script>
+  <script src="http://localhost:3000/js/cadastro.js"></script>
+</body>
+</html>

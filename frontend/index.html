@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservas de Laboratorio</title>
+    <link rel="stylesheet" href="http://localhost:3000/css/style.css" />
+  </head>
+  <body>
+    <main class="tela-login">
+      <section class="auth-visual">
+        <div class="auth-brand"><span>R</span><strong>ReservaLab</strong></div>
+        <div class="auth-copy">
+          <p>AGENDA ACADÊMICA</p>
+          <h1>Organize o laboratorio em poucos cliques.</h1>
+          <span
+            >Reserve periodos, acompanhe disponibilidade e evite
+            conflitos.</span
+          >
+        </div>
+      </section>
+      <section class="auth-card">
+        <div class="auth-card-inner">
+          <p class="eyebrow">Bem-vindo</p>
+          <h1>Entrar na conta</h1>
+          <form id="form-login">
+            <label
+              >Email<input
+                type="email"
+                name="email"
+                placeholder="nome@escola.com"
+                required
+            /></label>
+            <label
+              >Senha<input
+                type="password"
+                name="senha"
+                placeholder="Sua senha"
+                required
+            /></label>
+            <button type="submit">Entrar no sistema</button>
+          </form>
+          <p id="mensagem" class="mensagem"></p>
+          <p class="auth-link">
+            Ainda nao tem conta?
+            <a href="http://localhost:3000/pages/cadastro.html">Criar conta</a>
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="http://localhost:3000/js/api.js"></script>
+    <script src="http://localhost:3000/js/login.js"></script>
+  </body>
+</html>
